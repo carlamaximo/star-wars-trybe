@@ -5,8 +5,24 @@ import DataContext from './DataContext';
 export default function Provider({ children }) {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState({ filterByName: { name: '' } });
+  const [filters, setFilters] = useState({ filterByNumericValues: [] });
+  const [column, setColumn] = useState('population');
+  const [comparison, setComparison] = useState('maior que');
+  const [value, setValue] = useState(0);
 
-  const contextValue = { data, setData, filter, setFilter };
+  const contextValue = { data,
+    setData,
+    filter,
+    setFilter,
+    filters,
+    setFilters,
+    column,
+    setColumn,
+    comparison,
+    setComparison,
+    value,
+    setValue,
+  };
 
   const ENDPOINT = 'https://swapi-trybe.herokuapp.com/api/planets/';
   const apiRequest = async () => {

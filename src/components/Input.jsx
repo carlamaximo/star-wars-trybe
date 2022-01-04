@@ -9,10 +9,12 @@ export default function Input() {
   }
 
   return (
-    <input
-      type="text"
-      onChange={ handleChange }
-      data-testid="name-filter"
-    />
+    <div>
+      <input
+        type="text"
+        onChange={ handleChange }
+        data-testid="name-filter"
+      />
+    </div>
   );
 }

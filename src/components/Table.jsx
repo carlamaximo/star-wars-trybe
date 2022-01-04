@@ -4,8 +4,6 @@ import DataContext from '../context/DataContext';
 export default function Table() {
   const { data, filter } = useContext(DataContext);
   const { filterByName: { name } } = filter;
-  console.log('name', name);
-  console.log('filter', filter);
 
   const HEADER = ['Name', 'Rotation Period', 'Orbital Period', 'Diameter', 'Climate',
     'Gravity', 'Terrain', 'Surface Water', 'Population', 'Films',
