@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import DataContext from '../context/DataContext';
 
 export default function Table() {
-  const { data } = useContext(DataContext);
-  console.log('data', data);
+  const { data, filter } = useContext(DataContext);
+  const { filterByName: { name } } = filter;
+  console.log('name', name);
+  console.log('filter', filter);
 
   const HEADER = ['Name', 'Rotation Period', 'Orbital Period', 'Diameter', 'Climate',
     'Gravity', 'Terrain', 'Surface Water', 'Population', 'Films',
@@ -14,7 +16,7 @@ export default function Table() {
         <tr>{HEADER.map((title) => <th key={ title }>{ title }</th>)}</tr>
       </thead>
       <tbody>
-        { data.map((planet) => (
+        { data.filter((nameFilter) => nameFilter.name.includes(name)).map((planet) => (
           <tr key={ planet.name }>
             <td>{planet.name}</td>
             <td>{planet.rotation_period}</td>
@@ -25,7 +27,6 @@ export default function Table() {
             <td>{planet.terrain}</td>
             <td>{planet.surface_water}</td>
             <td>{planet.population}</td>
-            {/* <td>{planet.residents}</td> */}
             <td>{planet.films}</td>
             <td>{planet.created}</td>
             <td>{planet.edited}</td>

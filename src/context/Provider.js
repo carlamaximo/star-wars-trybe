@@ -4,7 +4,9 @@ import DataContext from './DataContext';
 
 export default function Provider({ children }) {
   const [data, setData] = useState([]);
-  const contextValue = { data, setData };
+  const [filter, setFilter] = useState({ filterByName: { name: '' } });
+
+  const contextValue = { data, setData, filter, setFilter };
 
   const ENDPOINT = 'https://swapi-trybe.herokuapp.com/api/planets/';
   const apiRequest = async () => {
