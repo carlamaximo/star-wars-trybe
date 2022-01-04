@@ -13,6 +13,8 @@ export default function FilterNumber() {
     setComparison,
     value,
     setValue,
+    columnsOption,
+    setColumnsOption,
   } = useContext(DataContext);
 
   const handleSearch = ({ target }) => {
@@ -40,6 +42,7 @@ export default function FilterNumber() {
     });
 
     setData(filter);
+    setColumnsOption(columnsOption.filter((item) => item !== column));
   };
 
   return (
@@ -49,11 +52,11 @@ export default function FilterNumber() {
         data-testid="column-filter"
         onChange={ handleSearch }
       >
-        <option value="population" selected>population</option>
-        <option value="orbital_period">orbital_period</option>
-        <option value="diameter">diameter</option>
-        <option value="rotation_period">rotation_period</option>
-        <option value="surface_water">surface_water</option>
+        {
+          columnsOption.map((option) => (
+            <option key={ option } value={ option }>{ option }</option>
+          ))
+        }
       </select>
       <select
         data-testid="comparison-filter"
