@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import DataContext from '../context/DataContext';
 import SelectFilter from './SelectFilter';
+import '../App.css';
 
 const OPTIONS = [
   'name',
@@ -41,7 +42,7 @@ export default function Order() {
         options={ OPTIONS }
         value={ order }
       />
-      <label htmlFor="column-sort-input-asc">
+      <label htmlFor="column-sort-input-asc" className="radio">
         <input
           checked={ sort === 'ASC' }
           data-testid="column-sort-input-asc"
@@ -50,11 +51,10 @@ export default function Order() {
           onChange={ ({ target: { value } }) => setSort(value) }
           type="radio"
           value="ASC"
-          className="radio"
         />
         Ascending
       </label>
-      <label htmlFor="column-sort-input-desc">
+      <label htmlFor="column-sort-input-desc" className="radio">
         <input
           checked={ sort === 'DESC' }
           data-testid="column-sort-input-desc"
@@ -63,7 +63,6 @@ export default function Order() {
           onChange={ ({ target: { value } }) => setSort(value) }
           type="radio"
           value="DESC"
-          className="radio"
         />
         Descending
       </label>
