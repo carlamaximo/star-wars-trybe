@@ -50,6 +50,7 @@ export default function Order() {
           onChange={ ({ target: { value } }) => setSort(value) }
           type="radio"
           value="ASC"
+          className="radio"
         />
         Ascending
       </label>
@@ -62,6 +63,7 @@ export default function Order() {
           onChange={ ({ target: { value } }) => setSort(value) }
           type="radio"
           value="DESC"
+          className="radio"
         />
         Descending
       </label>

@@ -3,6 +3,7 @@ import DataContext from '../context/DataContext';
 import CurrentFilters from './CurrentFilters';
 import FilterByNumericValues from './FilterByNumericValues';
 import Order from './Order';
+import '../App.css';
 
 export default function FilterNumber() {
   const { filters, setFilters } = useContext(DataContext);

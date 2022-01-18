@@ -6,11 +6,13 @@ import PlanetsProvider from './context/Provider';
 
 function App() {
   return (
-    <PlanetsProvider>
-      <h1>Star Wars Project</h1>
-      <FilterNumber />
-      <Table />
-    </PlanetsProvider>
+    <div className="body">
+      <PlanetsProvider>
+        <h1 className="title">Star Wars Project</h1>
+        <FilterNumber className="filterNumber" />
+        <Table />
+      </PlanetsProvider>
+    </div>
   );
 }
 
