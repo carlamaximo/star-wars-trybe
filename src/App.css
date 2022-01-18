@@ -84,3 +84,8 @@ th {
   background-color: purple;
   color: white;
 }
+
+.remove {
+  color: white;
+  font-size: 15px;
+}

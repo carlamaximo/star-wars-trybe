@@ -15,7 +15,7 @@ export default function CurrentFilters() {
   return (
     filterByNumericValues.length > 0
     && filterByNumericValues.map(({ column, comparison, value }) => (
-      <div data-testid="filter" key={ column }>
+      <div data-testid="filter" key={ column } className="remove">
         {column}
         {' '}
         {comparison}
