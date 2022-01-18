@@ -5,14 +5,19 @@ import DataContext from './DataContext';
 export default function Provider({ children }) {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState({ filterByName: { name: '' } });
-  const [filters, setFilters] = useState({ filterByNumericValues: [] });
+  const [filters, setFilters] = useState({ filterByNumericValues: [],
+    order: {
+      column: 'name',
+      sort: 'ASC',
+    } });
   const [column, setColumn] = useState('population');
   const [comparison, setComparison] = useState('maior que');
   const [value, setValue] = useState(0);
   const [columnsOption, setColumnsOption] = useState(['population', 'orbital_period',
     'diameter', 'rotation_period', 'surface_water']);
 
-  const contextValue = { data,
+  const contextValue = {
+    data,
     setData,
     filter,
     setFilter,
