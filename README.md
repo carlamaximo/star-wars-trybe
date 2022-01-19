@@ -28,6 +28,10 @@
       <li>CSS</li>
       <li>React</li>
       <li>Context API</li>
+      <li>React Hook useState</li>
+      <li>React Hook useContext</li>
+      <li>React Hook useEffect</li>
+      <li>API: https://swapi-trybe.herokuapp.com/api/planets/</li>
     </ul>
     <h2>Screenshot</h2>
     <span>
