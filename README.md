@@ -13,7 +13,7 @@
   <main>
     <p>Individual project, which the principal objective was to build a table with StarWars planets.</p>
     <p>Made on January, 2022.</p>
-    <h2>Features</h2>
+    <h3>Features</h3>
     <p>In addition to sorting planets in alphabetical order, users are able to filter planets by number of:</p>
     <ul>
       <li>Population</li>
@@ -22,7 +22,7 @@
       <li>Rotation period</li>
       <li>Surface water</li>
     </ul>
-    <h2>Build with</h2>
+    <h3>Build with</h3>
     <ul>
       <li>Javascript</li>
       <li>CSS</li>
@@ -33,7 +33,7 @@
       <li>React Hook useEffect</li>
       <li>API: https://swapi-trybe.herokuapp.com/api/planets/</li>
     </ul>
-    <h2>Screenshot</h2>
+    <h3>Screenshot</h3>
     <span>
       <img src="https://user-images.githubusercontent.com/71015610/150037862-a6421f4c-6b51-4ec2-a8f3-7753405a65ff.png" width="600px" />
     </span>
